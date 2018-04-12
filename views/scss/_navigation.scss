@@ -1,0 +1,131 @@
+.nav ul {
+	  display: none;
+}
+
+.nav label {
+	display: block;
+	background: #040309; 
+  width: 50px;
+	height: 50px;
+	cursor: pointer;
+  position: absolute;
+  right: 30px;
+	margin-top: 10px;
+
+	&:before {
+  content: 'HAPPENN';
+  float: right;
+  padding-top: 8px;
+  color: white;
+  right: 250px;
+  position: absolute;
+	}
+
+	&:after {
+	  content:'';
+	  display: block;
+	  width: 30px;
+	  height: 5px;
+	  background: #fff;
+	  margin: 7px 5px;
+	  box-shadow: 0px 10px 0px #fff, 0px 20px 0px #fff;		
+	}
+}
+
+[type="checkbox"]:checked ~ ul {
+	display: block;
+	z-index: 9999;
+	position: absolute;
+  right: 20px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.nav {
+  height: 60px;
+  background-color: #040309;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+	position: fixed;
+	top: 0;
+	width: 100%;  
+
+  input {
+  	display: none;
+  }
+
+  ul {
+	  list-style-type: none;
+	  padding-top: 20px;
+	  padding-bottom: 20px;
+	}
+
+	ul a {
+	  text-decoration: none;
+	  color: white;
+	}
+
+	ul a:visited {
+	  color: white;
+	}
+
+	li {
+    background-color: #040309;
+    border-bottom: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+	}
+
+}
+
+.nav > ul > li {
+		margin-left: 0px;
+}
+
+
+@media only screen and (min-width: 768px) {
+	[type="checkbox"], .nav > label {
+	  display: none !important;
+	}
+
+	.nav {
+	  padding-right: 50px;
+	  width: 100%;
+		
+		label {
+			display: none;
+		}
+
+		ul {
+		  display: inherit;
+		  padding-top: 0;
+		}
+	
+		[type="checkbox"]:checked ~ ul {
+			position: initial !important;
+		  right: 0;
+		  margin-top: 20px;
+		}
+
+		li {
+		  float: left;
+		  display: inline;
+		  width: 20%;
+	    border-bottom: 0;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    padding-left: 0;		
+	    text-align: center;  
+		}
+	}
+
+	.nav__brand {
+		text-align: left;
+	}
+
+	.nav__item {
+	  text-align: right;
+	  margin: 0;
+	}
+}

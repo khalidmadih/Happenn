@@ -1,0 +1,34 @@
+.profile {
+
+}
+
+.content__profile {
+
+}
+
+.content__profile__username {
+	text-align: left;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.content__profile__nickname {
+	@extend .content__profile__username;
+}
+
+.content__profile__rsvp {
+	@extend .content__profile__username;
+	// clear: both;
+}
+
+.content__profile__past {
+	@extend .content__profile__username;
+	// clear: both;
+}
+
+.content__profile__eventsCreated, .content__profile__past {
+	@extend .content__profile__username;
+	clear: both;
+}

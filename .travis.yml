@@ -1,0 +1,20 @@
+language: node_js
+node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: sRSQ4FXfNKiLHvsdd9Idki9SZvC9PL/CNp0NIiac3UTTOMa+mrWmdgCcZdly0NYfZSLxKaCXayf5Mh7dC38hw5emUN/pKgCDvufxGpxAf7JS8v38FDDyAZk+CSAF834s1azS+WZK/Khn0ZQa56/31anvfAPmWOGzK+EiWcrvVTyZBNWg4LE0/cpHtMAhGOGTNBGgKBGXneSktOWs4P0HJrdWmTW2QZjk8RIgPR/NSBTsIIHHzmVjs+bzptkYqEBfdpD1+ioQXVVZTN26VH+kBuj4YvRQ01AOVWpHgD/BPWI6W5eyUa7OTFW0H6OnBjk/X2YFy3iaFI4Zdz9atv5dI+ZiHbzLwM42qe7T6gSHsXYFnEprKlqFjiSWNPwpzcRtrWYF16WXhhROqp8OyXjnYVIEH2veJwVpOmICYAKHV4F5vt8uJWtNYf4xKxWNSZHoPeVhoSNHr1E/I2+6kc+7zl43jut4ZxgE6nONiq7/mIcSrno3pdL5dFaWvWw0oy37HS/cYWcRgixxocC4xyoia/tpNHYyxPvwrmpsosCWImyv/L68j2HRnf+facWxLwimL3/0KeiW2kAbU3JytMMzpViqSZ6v6G2HC2zkSjKzIhwUg3gDRYfvi2x0QVzarp0C7R68yCbxmGkcsLeAqCbRGODRwC1cpwaeIzWqSxFCfak=
+  app: sheltered-citadel-41356
+  on:
+    repo: roneyuan/musico-react
+services:
+- mongodb
+after_success: npm run coverage
+env:
+- CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8

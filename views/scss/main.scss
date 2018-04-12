@@ -1,0 +1,131 @@
+@import "grid";
+@import "event";
+@import "navigation";
+@import "post";
+@import "button";
+@import "profile";
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  background-color: #e8e8e8;
+  // padding-bottom: 50px;
+  margin: 0;
+}
+
+.content {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.app__title {
+	background-image: url('https://s3.amazonaws.com/eb-blog-wpmulti/wp-content/uploads/wpmulti/sites/3/2017/03/09123720/EDM-lights-EDC.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 360px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 25px;
+  color: #FFFFFF;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 60px;
+}
+
+.content__home {
+	background-image: url('http://www1.pictures.zimbio.com/gi/Phoenix+Suns+v+Sacramento+Kings+hNUImZVohv9l.jpg');
+	height: 700px;
+	background-size: cover;
+	margin-top: 20px;
+	border-radius: 5px;
+  // padding-left: 0 !important;
+  // padding-right: 0 !important;  
+  // max-width: none !important;
+  width: 100%;
+  position: absolute;
+  left: 0;  
+}
+
+.content__home__message {
+  width: 100%;
+  height: 100%;
+  background-color: #040309;
+  margin: auto;
+  padding-top: 30px;
+  color: white;
+  font-size: 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.content__home__message--question {
+  font-weight: bolder;
+  font-style: italic;
+  padding: 5px 0;
+  font-size: 22px;
+}
+
+.content__home__message--answer {
+
+}
+
+.content__post-comment {
+  height: 250px;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.content__event__comment {
+  line-height: 200%;
+  
+  button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.login {
+	@extend .content__home;
+	height: 100%;
+	background-image: url('https://dukeperformances.duke.edu/wp-content/uploads/2018/03/04-07-18-Maria-Schneider-Orchestra-5.jpg');
+	margin: 0;
+	font-family: 'Puritan', sans-serif;
+  text-align: center;
+}
+
+.login__title {
+  font-size: 30px;
+  margin-top: 60px;
+  color: #ffffff;
+  padding: 15px 20px;
+}
+
+.login__button {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.login__bed {
+  	
+  height: 100%;	
+}
+
+.separtor {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.app__title {
+		background-size: cover;
+		height: 500px;
+	}
+  .content__home__message {
+    font-size: 20px;
+  }
+}

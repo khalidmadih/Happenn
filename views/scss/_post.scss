@@ -1,0 +1,58 @@
+.content__post-event {
+  margin:20px auto;
+  // text-align: center;
+}
+
+.content__event-posted {
+  height: 300px;
+  padding: 50px 50px;	
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+input {
+	height: 30px;
+	width: 360px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid black;
+	padding-left: 5px;
+}
+
+input, label {
+	float: left;
+}
+
+textarea {
+	@extend input;
+	width: 360px;
+	height: 180px;
+}
+
+label {
+  // padding-left: 20px;
+  padding-right: 20px;
+  // text-align: right;
+  width: 150px;
+}
+
+.form-control {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	clear: both;
+}
+
+label, input, textarea {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+	label {
+		padding-left: 20px;
+	}
+	.date-example {
+		// margin-left: 20px;
+	}
+}
