@@ -1,7 +1,7 @@
 exports.DATABASE_URL = process.env.DATABASE_URL ||
 											global.DATABASE_URL ||
-											'mongodb://localhost/musico-react-app';
+											'mongodb://localhost/happenn-app';
 exports.TEST_DATABASE_URL = process.env.DATABASE_URL ||
 											global.DATABASE_URL ||
-											'mongodb://localhost/test-musico-react-app';
+											'mongodb://localhost/test-happenn-app';
 exports.PORT = process.env.PORT || 8080;
