@@ -1,4 +1,4 @@
-<img width="1280" alt="" src="#">
+<img width="1280" alt="" src="https://github.com/khalidmadih/Happenn/blob/master/views/img/AppScreenshot.png">
 
 
 # Happen'n
