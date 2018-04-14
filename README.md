@@ -1,12 +1,12 @@
-<img width="1280" alt="" src="https://user-images.githubusercontent.com/10294399/29429639-62051274-835f-11e7-89e2-763d41a697f8.jpg">
+<img width="1280" alt="" src="#">
 
 
-# musico-react
-Fullstack React App for finding and posting music events 
+# Happen'n
+Fullstack React Application for finding and posting events in your city
 
 ## Features
 
- - Created the events
+ - Create the events
  - View all the events that all the users created
  - Review and comment the past events
  - RSVP the events
