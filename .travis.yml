@@ -3,7 +3,7 @@ node_js: node
 deploy:
   provider: heroku
   api_key: 
-    secure: 8e8011f4-18d4-4123-94fd-2a2ce4c5ac3f
+    secure: hWx8dTyISa9-f4JkZeKLpg
   app: frozen-sands-14716
   on:
     repo: khalidmadih/Happenn
