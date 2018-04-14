@@ -36,7 +36,7 @@
     "_build:assets": "cpr assets views/build/assets",
     "watch:assets": "run-s build:assets _watch:assets",
     "_watch:assets": "chokidar views/assets/**/* -c \"npm run build:assets\"",
-    "postinstall": "webpack",
+    
   },
   "author": "Adam, Andy, Chris, Kal",
   "license": "UNLICENSED",
