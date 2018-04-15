@@ -21,7 +21,7 @@ body {
 }
 
 .app__title {
-	background-image: url('https://s3.amazonaws.com/eb-blog-wpmulti/wp-content/uploads/wpmulti/sites/3/2017/03/09123720/EDM-lights-EDC.jpg');
+	background-image: url('../img/concert.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 360px;
@@ -35,7 +35,7 @@ body {
 }
 
 .content__home {
-	background-image: url('http://www1.pictures.zimbio.com/gi/Phoenix+Suns+v+Sacramento+Kings+hNUImZVohv9l.jpg');
+	background-image: url('../img/suns.jpg');
 	height: 700px;
 	background-size: cover;
 	margin-top: 20px;
@@ -90,7 +90,7 @@ body {
 .login {
 	@extend .content__home;
 	height: 100%;
-	background-image: url('https://dukeperformances.duke.edu/wp-content/uploads/2018/03/04-07-18-Maria-Schneider-Orchestra-5.jpg');
+	background-image: url('../img/maestro.jpg');
 	margin: 0;
 	font-family: 'Puritan', sans-serif;
   text-align: center;
