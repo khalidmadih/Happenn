@@ -12,6 +12,7 @@ router.use(passport.initialize());
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const BearerStrategy = require('passport-http-bearer').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 
 
 passport.use(new GoogleStrategy({
