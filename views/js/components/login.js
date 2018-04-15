@@ -12,9 +12,7 @@ export default function Login() {
         <div className="login__button">
           <a href="api/user/auth/google"><button className="btn__google">Login with Google</button></a> 
         </div>
-        <div className="login__button">
-          <a href="/#/demo/home"><button className="btn__demo">Demo Account Login</button></a>  
-        </div>
+        
       </div>
     </div>
   )

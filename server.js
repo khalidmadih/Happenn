@@ -17,8 +17,8 @@ mongoose.Promise = global.Promise;
 // Need to research on {} return. Why it will give type error?
 const eventRouter = require('./router/eventRouter');
 const userRouter = require('./router/userRouter');
-const eventRouterDemo = require('./router/demo/eventRouter');
-const userRouterDemo = require('./router/demo/userRouter');
+// const eventRouterDemo = require('./router/demo/eventRouter');
+// const userRouterDemo = require('./router/demo/userRouter');
 
 app.get('/', (req, res) => {
 	res.redirect(301, 'index.html') 
@@ -26,8 +26,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/user', userRouter);
 app.use('/api/event', eventRouter);
-app.use('/api/demo/user', userRouterDemo);
-app.use('/api/demo/event', eventRouterDemo);
+// app.use('/api/demo/user', userRouterDemo);
+// app.use('/api/demo/event', eventRouterDemo);
 
 // app.get('/', (req, res) => {
 // 	res.redirect('/home');

@@ -10,17 +10,13 @@ export default function PastEvent(props) {
       <div className="content__event__location">Location: { props.location }</div>
       <div className="content__event__time">Time: { props.time }</div>              
       <div className="content__event__expectation">
-        Does the event meet your expectation?
+        Did you like this event?
         <div>
           <button className="btn__survey" onClick={props.clickYes}> Yes </button> 
           <button className="btn__survey" onClick={props.clickNo}> No </button>
         </div>
       </div>
-      <div className="content__event__comment">
-        <div>
-          <button onClick={props.eventClick} className="btn__rsvp"> Review </button>
-        </div>
-      </div>      
+           
     </div>
   );
 }

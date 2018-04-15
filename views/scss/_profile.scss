@@ -7,8 +7,10 @@
 }
 
 .content__profile__username {
+	display: inline-block;
+    width: 50%;
 	text-align: left;
-	font-size: 20px;
+	font-size: 18px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 
@@ -16,19 +18,23 @@
 
 .content__profile__nickname {
 	@extend .content__profile__username;
+	width: 50%;
 }
 
 .content__profile__rsvp {
 	@extend .content__profile__username;
+	width: 100%;
 	// clear: both;
 }
 
 .content__profile__past {
 	@extend .content__profile__username;
+	width: 100%;
 	// clear: both;
 }
 
-.content__profile__eventsCreated, .content__profile__past {
+.content__profile__eventsCreated {
 	@extend .content__profile__username;
+	width: 100%;
 	clear: both;
 }

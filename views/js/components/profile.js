@@ -104,11 +104,12 @@ class Profile extends Component {
     } else {
       return (
         <div className='content__profile'>
-          <div className="content__profile__username"> Username: { this.props.user.username } </div>
-          <div className="content__profile__nickname"> Nickname: { this.props.user.nickname } </div>
-          <div className="content__profile__rsvp"> RSVP : <div> { rsvpList } </div> </div>
-          <div className="content__profile__past"> Past : <div> { pastEventList } </div> </div>
-          <div className="content__profile__eventsCreated"> Created : <div> { createdList } </div> </div>             
+          <div className="content__profile__username"> <b> Username: </b> { this.props.user.username } </div>
+          <div className="content__profile__nickname"> <b>Nickname: </b>{ this.props.user.nickname } </div>
+          <div className="content__profile__eventsCreated"> <b>Events I created</b> : <div> { createdList } </div> </div>
+          <div className="content__profile__rsvp"> <b>Future events I RSVP'ed : </b><div> { rsvpList } </div> </div>
+          <div className="content__profile__past"> <b>Past events I RSVP'ed : </b><div> { pastEventList } </div> </div>
+                       
         </div>      
       )      
     }

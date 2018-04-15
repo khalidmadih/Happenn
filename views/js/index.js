@@ -11,11 +11,7 @@ import Login from './components/login';
 import PostEvent from './components/post-event';
 import Profile from './components/profile';
 import Registration from './components/registration';
-import DemoApp from './components/demo/app';
-import DemoEventList from './components/demo/event-list';
-import DemoHome from './components/demo/home';
-import DemoPostEvent from './components/demo/post-event';
-import DemoProfile from './components/demo/profile';
+
 // import '../scss/main.scss';
 require("!style-loader!css-loader!sass-loader!../scss/main.scss");
 
@@ -31,13 +27,7 @@ const routes = (
 				<Route path="/app/events" component={EventList} />
 				<Route path="/app/postevents" component={PostEvent} />		
 				<Route path="/app/profile" component={Profile} />		
-			</Route>
-			<Route path='/demo' component={DemoApp}>
-				<Route path="/demo/home" component={DemoHome} />
-				<Route path="/demo/events" component={DemoEventList} />
-				<Route path="/demo/postevents" component={DemoPostEvent} />		
-				<Route path="/demo/profile" component={DemoProfile} />		
-			</Route>			
+			</Route>		
 			<Route path='/login' component={Login} />
 			<Route path='/register' component={Registration} />	
 		</Router>
