@@ -1,5 +1,5 @@
 $event-box-color: #fbfbfb;
-$event-box-border-color: #1a78c2;
+$event-box-border-color: #677588;
 
 .content__event-box {
     float: left;
@@ -75,6 +75,7 @@ $event-box-border-color: #1a78c2;
 
 .content__event__numberOfRsvp {
     @extend .padding;
+    color: purple;
 }
 
 .content__event__expectation {

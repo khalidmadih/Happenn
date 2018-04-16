@@ -30,7 +30,7 @@ class EventList extends Component {
 			this.props.rsvp.forEach(rsvpEvent => {
 				if (event._id === rsvpEvent._id) {
 					ifRsvp = true;
-					rsvpNotice = "You have rsvp the event";
+					rsvpNotice = "You have RSVP'ed this event";
 				}
 			})
 

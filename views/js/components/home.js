@@ -18,8 +18,8 @@ export default function Home() {
             <div className="content__home__message--answer">Click "Event" tab above, then you can start create an event.<p></p></div>
             <div className="content__home__message--question">Can I cancel the event that I reserverd or created?</div>
             <div className="content__home__message--answer">Of course! Just go to "Account" tab, then you can cancel the event you reserverd or created. <p></p></div>
-            <div className="content__home__message--question">Can I leave a comment for the event?</div>
-            <div className="content__home__message--answer">Go to "Account" tab, and you can see there is a "Comment" button in the "Past" session. </div>
+            <div className="content__home__message--question">Can I review the events I attended?</div>
+            <div className="content__home__message--answer">Go to "My Events" tab, and under “Past events I RSVP'ed ", you can mark the events you enjoyed with a “yes” or “no”.</div>
         </div>
     </div>
   )
