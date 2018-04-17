@@ -63,7 +63,7 @@ passport.use(new BearerStrategy(function(token, done) {
 	});
 }));
 
-router.get('/auth/facebook', passport.authenticate('facebook'));
+// router.get('/auth/facebook', passport.authenticate('facebook'));
 
 router.get('/auth/google', passport.authenticate('google', {scope: ['email profile']}));
 
@@ -74,11 +74,17 @@ router.get('/auth/google/callback', passport.authenticate('google', {failureRedi
 		res.redirect('/#/app/home')
 });
 
-router.get('/auth/facebook/callback', passport.authenticate('facebook', {failureRedirect: 'login', session: false}),
-	function(req, res) {
-		res.cookie('accessToken', req.user.password, { expires: 0 });
-		res.redirect('/#/app/home')
-});
+
+router.get('/auth/facebook',
+  passport.authenticate('facebook'));
+
+router.get('/auth/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/#/app/home');
+  });
+
 
 router.get('/auth/logout', (req, res) => {
   req.logout();
