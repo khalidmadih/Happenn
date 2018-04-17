@@ -19,6 +19,14 @@ $event-box-border-color: #677588;
     margin-top: 50px;
 }
 
+.content__event__image {
+	height: auto; 
+    width: auto; 
+    max-width: 150px; 
+    max-height: 150px;
+    float:right;
+}
+
 .content__event {
     border: 1px solid $event-box-border-color;
     border-radius: 5px;

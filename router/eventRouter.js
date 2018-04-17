@@ -130,7 +130,8 @@ router.post('/', passport.authenticate('bearer', {session: false}), (req, res) =
 			time: req.body.time,
 			description: req.body.description,
 			tag: req.body.tag,
-			price: req.body.price
+			price: req.body.price,
+			image: req.body.image
 		})
 		.then(event => {
 			// Chain to the user

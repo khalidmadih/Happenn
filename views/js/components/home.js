@@ -6,14 +6,12 @@ export default function Home() {
     <div className="content__home">
         <div className="content__home__message">
             <div>Welcome to Happen'n. You can start browsing the application by clicking the menu bar above.<p></p></div>
-            <div>About us: <p></p></div>
+            <div className="content__home__message__title">About us: <p></p></div>
             <div>
-                Happen'n is dedicated to help people find events in their city.
-                <br />
-                Also, we provides a platform so that everyone can post events and share them with the world.
+                Happen'n is dedicated to help people find events in their city. We provides a platform that allows everyone to post events and share them with the world.
                 <p></p>
             </div>
-            <div>FAQ <p></p></div>
+            <div className="content__home__message__title">FAQ</div><br></br>
             <div className="content__home__message--question">How do I create an event?</div>
             <div className="content__home__message--answer">Click "Add Event" tab above, then you can start create an event.<p></p></div>
             <div className="content__home__message--question">Can I cancel the event that I reserverd or created?</div>

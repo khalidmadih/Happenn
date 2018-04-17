@@ -36,7 +36,8 @@ class EventList extends Component {
 
 			return (
 				<div className="content__event-box" key={ index }>
-					<Event name={ event.name }
+					<Event image={ event.image }
+								name={ event.name }
 								 tag={ event.tag }
 								 description={ event.description }
 								 price={ event.price }

@@ -23,22 +23,27 @@ class PostEvent extends Component {
             let tag = event.target.tag.value;
             let location = event.target.location.value;
             let time = event.target.time.value;
+            let image = event.target.image.value;
 
             const accessToken = Cookies.get('accessToken'); // Get that from the state
             
-            this.props.postEvent(name, price, description, location, tag, time, accessToken);
+            this.props.postEvent(name, price, description, location, tag, time, accessToken, image);
           }}>
 
           <div className="form-control">
-            <label> Name: </label>
+            <label className="content__post-event__label"> Name: </label>
             <input type="text" name="name" />
           </div>
           <div className="form-control">
-            <label> Location: </label>
+            <label className="content__post-event__label"> Image link: </label>
+            <input type="text" name="image" />
+          </div>
+          <div className="form-control">
+            <label className="content__post-event__label"> Location: </label>
             <input type="text" name="location" />
           </div>
           <div className="form-control">
-            <label> When: </label>
+            <label className="content__post-event__label"> When: </label>
             <input type="datetime-local" name="time" />
           </div>               
           <div className="form-control ">
@@ -46,15 +51,15 @@ class PostEvent extends Component {
             (Format: 01/01/2017, 10:00 AM)
           </div>
           <div className="form-control">
-            <label> Price: </label>
+            <label className="content__post-event__label"> Price: </label>
             <input type="number" name="price" />
           </div>
           <div className="form-control">
-            <label> Description: </label>
+            <label className="content__post-event__label"> Description: </label>
             <textarea type="text" name="description"></textarea>
           </div>
           <div className="form-control">
-            <label> Tag: </label>
+            <label className="content__post-event__label"> Tag: </label>
             <input type="text" name="tag" /> 
           </div>
           <div className="form-control">                            

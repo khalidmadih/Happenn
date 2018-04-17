@@ -44,11 +44,10 @@ const EventSchema = Schema({
 	},
 	comments: {
 		type: [String]
+	},
+	image: {
+		type: String
 	}
-	// Future feature
-	// image: {
-	// 	type: 
-	// }
 });
 
 EventSchema.methods.apiRepr = function() {
@@ -59,8 +58,8 @@ EventSchema.methods.apiRepr = function() {
 		time: this.time,
 		description: this.description,
 		price: this.price,
-		tag: this.tag
-		// image: this.image
+		tag: this.tag,
+		image: this.image
 	}
 }
 

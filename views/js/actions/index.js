@@ -1,4 +1,4 @@
-const receiveRegisterUser = (user) => ({
+	const receiveRegisterUser = (user) => ({
 	type: 'RECEIVE_REGISTER_USER',
 	user
 })
@@ -226,7 +226,8 @@ export const clickRsvp = (event, accessToken) => {
 				time: event.time,
 				description: event.description,
 				tag: event.tag,
-				price: event.price
+				price: event.price,
+				image: event.image
 			})
 		})
 		.then(response => response.json())
@@ -290,7 +291,7 @@ export const getAllEvents = (accessToken) => {
 	}
 }
 
-export const postEvent = (name, price, description, location, tag, time, accessToken) => {
+export const postEvent = (name, price, description, location, tag, time, accessToken, image) => {
 	return dispatch => {
 		fetch('/api/event', {
 			method: 'POST',
@@ -304,7 +305,8 @@ export const postEvent = (name, price, description, location, tag, time, accessT
 				description: description,
 				location: location,
 				tag: tag,
-				time: time
+				time: time,
+				image: image
 			})
 		})
 		.then(response => response.json())

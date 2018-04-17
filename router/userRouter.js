@@ -246,6 +246,8 @@ router.delete('/cancelEvent/:eventId', passport.authenticate('bearer', {session:
 		.catch(err => res.status(500).json({message: 'Internal Error Message'}))
 })
 
+
+
 // Furture features
 // // Get the users event. The info will be public so does not need use passport. 
 // router.get('/:username', (req, res) => {

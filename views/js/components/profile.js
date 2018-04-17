@@ -1,3 +1,5 @@
+// Still neeeds work to implement
+
 import React , { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -36,7 +38,8 @@ class Profile extends Component {
       // pastEventComponents
       pastEventList = filterPastEvents.reverse().map((event, index) =>
         <div className="content__event-box" key={index}>
-          <PastEvent name={ event.name }
+          <PastEvent image={ event.image }
+                  name={ event.name }
                  tag={ event.tag }
                  description={ event.description }
                  price={ event.price }
@@ -58,7 +61,8 @@ class Profile extends Component {
       
       rsvpList = filterCurrentEvents.reverse().map((event, index) => 
         <div className="content__event-box" key={index}>
-          <Event name={ event.name }
+          <Event image={ event.image }
+                  name={ event.name }
                  tag={ event.tag }
                  description={ event.description }
                  price={ event.price }
@@ -77,7 +81,9 @@ class Profile extends Component {
     if (this.props.user.eventsCreated) {
       createdList = this.props.user.eventsCreated.reverse().map((event, index) => 
         <div className="content__event-box" key={ index }>
-          <EventCreated name={ event.name }
+          <EventCreated 
+                image={ event.image }
+                name={ event.name }
                  tag={ event.tag }
                  description={ event.description }
                  price={ event.price}
