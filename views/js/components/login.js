@@ -12,10 +12,6 @@ export default function Login() {
         <div className="login__button">
           <a href="api/user/auth/google"><button className="btn__google">Login with Google</button></a> 
         </div>
-
-        <div className="login__button">
-          <a href="api/user/auth/facebook"><button className="btn__facebook">Login with Facebook</button></a> 
-        </div>
         
       </div>
     </div>

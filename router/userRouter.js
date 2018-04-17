@@ -5,7 +5,7 @@ const router = express.Router();
 const jsonParser = require('body-parser').json();
 const {User} = require('../models/users');
 const {Event} = require('../models/events');
-const passportFacebook = require("passport-facebook");
+// const passportFacebook = require("passport-facebook");
 
 
 router.use(jsonParser);
@@ -13,25 +13,25 @@ router.use(passport.initialize());
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const BearerStrategy = require('passport-http-bearer').Strategy;
-const FacebookStrategy = require('passport-facebook').Strategy;
+// const FacebookStrategy = require('passport-facebook').Strategy;
 
-passport.use(new FacebookStrategy({
-	clientID: '2046334205641374',
-    clientSecret: 'ec8bb3f26ba23b717315e94441363e76',
-    callbackURL: "/api/user/auth/facebook/callback"
-}, function(accessToken, refreshToken, profile, done) {
-	return User
-		.findOrCreate({
-			username: profile.id
-		}, 
-		{
-			password: accessToken,
-			nickname: profile.displayName
-		}, (err, user) => {
-			// Need to find out why use null
-			return done(null, user);
-		})
-}));
+// passport.use(new FacebookStrategy({
+// 	clientID: '2046334205641374',
+//     clientSecret: 'ec8bb3f26ba23b717315e94441363e76',
+//     callbackURL: "/api/user/auth/facebook/callback"
+// }, function(accessToken, refreshToken, profile, done) {
+// 	return User
+// 		.findOrCreate({
+// 			username: profile.id
+// 		}, 
+// 		{
+// 			password: accessToken,
+// 			nickname: profile.displayName
+// 		}, (err, user) => {
+// 			// Need to find out why use null
+// 			return done(null, user);
+// 		})
+// }));
 
 
 passport.use(new GoogleStrategy({
@@ -63,7 +63,6 @@ passport.use(new BearerStrategy(function(token, done) {
 	});
 }));
 
-// router.get('/auth/facebook', passport.authenticate('facebook'));
 
 router.get('/auth/google', passport.authenticate('google', {scope: ['email profile']}));
 
@@ -75,15 +74,15 @@ router.get('/auth/google/callback', passport.authenticate('google', {failureRedi
 });
 
 
-router.get('/auth/facebook',
-  passport.authenticate('facebook'));
+// router.get('/auth/facebook',
+//   passport.authenticate('facebook', {scope: ['email']}));
 
-router.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/#/app/home');
-  });
+// router.get('/auth/facebook/callback',
+//   passport.authenticate('facebook', { failureRedirect: '/login' }),
+//   function(req, res) {
+//     // Successful authentication, redirect home.
+//     res.redirect('/#/app/home');
+//   });
 
 
 router.get('/auth/logout', (req, res) => {
