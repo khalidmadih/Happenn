@@ -10,6 +10,7 @@ router.use(jsonParser);
 router.use(passport.initialize());
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const GoogleStrategy = require('passport-facebook).Strategy').Strategy;
 const BearerStrategy = require('passport-http-bearer').Strategy;
 
 
