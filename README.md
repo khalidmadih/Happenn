@@ -48,7 +48,11 @@ Finally to run the app in dev.
 ```
 npm run dev
 ```
-Make sure to have another terminal window open to run mongod
+Make sure to have another terminal window open to run
+
+```
+mongod
+```
 
 ## Deployment
 
@@ -79,7 +83,7 @@ You can log into the app with your Google profile and add events as well as RSVP
 
 ## Authors
 
-* **Kal** - [Pkhalidmadih](https://github.com/khalidmadih)
+* **Kal** - [khalidmadih](https://github.com/khalidmadih)
 * **Andy** - [ir1shaz](https://github.com/ir1shaz)
 * **Chris** - [cwbrannan](https://github.com/cwbrannan)
 * **Adam** - [eelhead](https://github.com/eelhead)
