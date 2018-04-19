@@ -60,6 +60,7 @@ You can log into the app with your Google profile and add events as well as RSVP
 
 ## Built With
 
+* [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for node.js
 * [MongoDB](https://www.mongodb.com/) - Free and open-source cross-platform document-oriented database program
 * [Express.js](https://expressjs.com/) - A minimal and flexible Node.js web application framework
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces
@@ -71,10 +72,11 @@ You can log into the app with your Google profile and add events as well as RSVP
 * [Istanbul](https://istanbul.js.org/) - JavaScript test coverage
 * [SCSS](https://sass-lang.com/guide) - Lets you use features that don't exist in CSS yet
 * [BEM](http://getbem.com/) - Create reusable components and code sharing in front-end development
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Travis CI](https://travis-ci.org/) - Used to build and test software projects hosted at GitHub
 
 ## Other Technology
 
+* Heroku
 * Google OAuth
 * Basic login strategy
 * More
