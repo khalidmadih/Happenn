@@ -13,7 +13,6 @@ and have other people RSVP on posted events. Each event posted will give basic i
  - Review past events
  - RSVP the events
  - Cancel the created and reserved events
- - Thumbs up or down for the past events
 
 
 ## Getting Started
