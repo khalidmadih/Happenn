@@ -49,12 +49,6 @@ Finally to run the app in dev.
 npm run dev
 ```
 
-Make sure to have another terminal window open to 
-
-```
-yarn start
-```
-
 ## Deployment
 
 The app is currently running on Heroku at (http://frozen-sands-14716.herokuapp.com/#/app/home)
