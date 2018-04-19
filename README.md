@@ -10,7 +10,7 @@ and have other people RSVP on posted events. Each event posted will give basic i
 
  - Create the events
  - View all the events that all the users created
- - Review and comment the past events
+ - Review past events
  - RSVP the events
  - Cancel the created and reserved events
  - Thumbs up or down for the past events
