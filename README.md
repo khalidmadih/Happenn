@@ -74,6 +74,7 @@ You can log into the app with your Google profile and add events as well as RSVP
 * [BEM](http://getbem.com/) - Create reusable components and code sharing in front-end development
 * [Travis CI](https://travis-ci.org/) - Used to build and test software projects hosted at GitHub
 * [Webpack](https://webpack.js.org/) - A module bundler
+* [Babel](https://babeljs.io/) - The compiler for writing next generation JavaScript
 
 ## Other Technology
 
