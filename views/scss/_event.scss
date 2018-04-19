@@ -59,8 +59,7 @@ $event-box-border-color: #677588;
 .content__event__description {
     @extend .padding;
     max-width: 100ch;
-    max-height: 300px; // min-height: 300px;
-    // overflow-y: scroll;
+    max-height: max-content; // min-height: 300px;
     padding-left: 5px;
     padding-right: 5px;
 }
