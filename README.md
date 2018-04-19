@@ -73,6 +73,7 @@ You can log into the app with your Google profile and add events as well as RSVP
 * [SCSS](https://sass-lang.com/guide) - Lets you use features that don't exist in CSS yet
 * [BEM](http://getbem.com/) - Create reusable components and code sharing in front-end development
 * [Travis CI](https://travis-ci.org/) - Used to build and test software projects hosted at GitHub
+* [Webpack](https://webpack.js.org/) - A module bundler
 
 ## Other Technology
 
