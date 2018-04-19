@@ -79,6 +79,7 @@ You can log into the app with your Google profile and add events as well as RSVP
 * Heroku
 * Google OAuth
 * Basic login strategy
+* JavaScript ES6
 * More
 
 
