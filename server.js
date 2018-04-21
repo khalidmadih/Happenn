@@ -17,8 +17,7 @@ mongoose.Promise = global.Promise;
 // Need to research on {} return. Why it will give type error?
 const eventRouter = require('./router/eventRouter');
 const userRouter = require('./router/userRouter');
-// const eventRouterDemo = require('./router/demo/eventRouter');
-// const userRouterDemo = require('./router/demo/userRouter');
+
 
 app.get('/', (req, res) => {
 	res.redirect(301, 'index.html') 
@@ -26,8 +25,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/user', userRouter);
 app.use('/api/event', eventRouter);
-// app.use('/api/demo/user', userRouterDemo);
-// app.use('/api/demo/event', eventRouterDemo);
+
 
 // app.get('/', (req, res) => {
 // 	res.redirect('/home');
@@ -60,8 +58,7 @@ function runServer(databaseUrl=DATABASE_URL, port=PORT) {
 			resolve(server);
 		}).on('error', err => {
 			// console.log("Failed to create server");
-			/* istanbul ignore next */
-			reject(err);
+						reject(err);
 		});
 	});
 }
@@ -74,7 +71,7 @@ function closeServer() {
 				if (err) {
 					// console.log("Unable to close server.");
 
-					/* istanbul ignore next */
+					
 					reject(err);
 				}
 				// console.log("Server is closed.");
@@ -84,9 +81,8 @@ function closeServer() {
 	});
 }
 
-// To run the application, Need to ask why?
 if (require.main === module) {
-	/* istanbul ignore next */
+	
 	runServer().catch(err => {  
 		console.log(err)
 	});
