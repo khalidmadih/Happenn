@@ -55,7 +55,7 @@ mongod
 
 ## Deployment
 
-The app is currently running on Heroku at (http://frozen-sands-14716.herokuapp.com/#/app/home)
+The app is currently running on Heroku at (http://frozen-sands-14716.herokuapp.com/)
 You can log into the app with your Google profile and add events as well as RSVP events
 
 ## Built With
