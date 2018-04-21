@@ -1,3 +1,4 @@
+// Requiring modules
 const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
@@ -6,9 +7,11 @@ const jsonParser = require('body-parser').json();
 const {Event} = require('../models/events');
 const {User} = require('../models/users');
 
+
 router.use(jsonParser);
 router.use(passport.initialize());
 
+// using Google Strategy & Bearer Strategy
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const BearerStrategy = require('passport-http-bearer').Strategy;
 
@@ -23,17 +26,16 @@ passport.use(new BearerStrategy(function(token, done) {
 	});
 }));
 
-
+// Route to get all events
 router.get('/all', passport.authenticate('bearer', {session: false}), (req, res) => {
-	// Get all events
-	// Return all events here
-	// Use MongoDB query to return all events
+	
 	return Event
 		.find({}, (err, events) => {
 			res.status(200).json(events);
 		});
 });
 
+// Route to get positive comments
 router.put('/updatePositive', passport.authenticate('bearer', {session: false}), (req, res) => {
 	// console.log("ID", req.body.eventId)
 	return Event
@@ -64,6 +66,7 @@ router.put('/updatePositive', passport.authenticate('bearer', {session: false}),
 		})
 });
 
+// Route to get negative comments
 router.put('/updateNegative', passport.authenticate('bearer', {session: false}), (req, res) => {
 	return Event
 		.findOne({_id: req.body.eventId})
@@ -92,7 +95,7 @@ router.put('/updateNegative', passport.authenticate('bearer', {session: false}),
 		})
 });
 
-// TODO - Need to put at userRouter
+// Route to post a comment
 router.put('/postComment', passport.authenticate('bearer', {session: false}), (req, res) => {
 	return Event
 		.findOne({_id: req.body.eventId})

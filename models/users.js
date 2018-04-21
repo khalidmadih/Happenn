@@ -1,3 +1,5 @@
+// File creating the Users Schema
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const findOrCreate = require('mongoose-find-or-create');
@@ -27,15 +29,11 @@ const UserSchema = Schema({
 		type: Schema.Types.ObjectId,
 		ref: 'Event'
 	}]
-	// Future feature
-	// eventsInterested: {
-	// }
 });
 
 UserSchema.plugin(findOrCreate);
 
-// Use methods becuase why need to research later and difference between
-// other call or methods function - static
+
 UserSchema.methods.getUserInfo = function() {
 	return {
 		id: this.id,
@@ -53,5 +51,5 @@ UserSchema.methods.getUserEvents = function() {
 
 const User = mongoose.model('User', UserSchema);
 
-// When to use {} when to not use?
+
 module.exports = {User}

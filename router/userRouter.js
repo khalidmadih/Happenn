@@ -1,3 +1,5 @@
+// Requiring modules
+
 const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
@@ -5,7 +7,7 @@ const router = express.Router();
 const jsonParser = require('body-parser').json();
 const {User} = require('../models/users');
 const {Event} = require('../models/events');
-// const passportFacebook = require("passport-facebook");
+
 
 
 router.use(jsonParser);
@@ -13,27 +15,9 @@ router.use(passport.initialize());
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const BearerStrategy = require('passport-http-bearer').Strategy;
-// const FacebookStrategy = require('passport-facebook').Strategy;
-
-// passport.use(new FacebookStrategy({
-// 	clientID: '2046334205641374',
-//     clientSecret: 'ec8bb3f26ba23b717315e94441363e76',
-//     callbackURL: "/api/user/auth/facebook/callback"
-// }, function(accessToken, refreshToken, profile, done) {
-// 	return User
-// 		.findOrCreate({
-// 			username: profile.id
-// 		}, 
-// 		{
-// 			password: accessToken,
-// 			nickname: profile.displayName
-// 		}, (err, user) => {
-// 			// Need to find out why use null
-// 			return done(null, user);
-// 		})
-// }));
 
 
+// New Google Strategy and passing API credentials
 passport.use(new GoogleStrategy({
 	clientID: '859169000889-l85bfaadbm1oe5b0eoql9df5f60piqc3.apps.googleusercontent.com',
 	clientSecret: 'p4BYNOBgv-jEjFLTd13NfTaZ',
@@ -47,18 +31,18 @@ passport.use(new GoogleStrategy({
 			password: accessToken,
 			nickname: profile.displayName
 		}, (err, user) => {
-			// Need to find out why use null
+			
 			return done(null, user);
 		})
 }));
 
-
+// New Bearer Strategy 
 passport.use(new BearerStrategy(function(token, done) {
 	User.findOne({password: token}, function(err, user) {
 		if (err) return done(err);
-		// Need to find out why false
+		
 		if (!user) return done(null, false);
-		// Need to find out how
+		
 		return done(null, user, {scope: 'all'});
 	});
 }));

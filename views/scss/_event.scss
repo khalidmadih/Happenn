@@ -54,6 +54,7 @@ $event-box-border-color: #677588;
 .padding {
     padding-top: 12px;
     padding-bottom: 12px;
+    margin-right:20px;
 }
 
 .content__event__description {
@@ -62,6 +63,7 @@ $event-box-border-color: #677588;
     max-height: max-content; // min-height: 300px;
     padding-left: 5px;
     padding-right: 5px;
+
 }
 
 .content__event__tag {
@@ -114,17 +116,14 @@ $event-box-border-color: #677588;
     }
 
     .content__event__tag {
-        width: 100px;
         float: left;
     }
 
     .content__event__price {
-        width: 100px;
         float: left;
     }
 
     .content__event__location {
-        width: 180px;
         float: left;
     }
 }
